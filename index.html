@@ -26,6 +26,7 @@ const weddingData = {
   nikahTime        : "12:30 PM Onwords",
   nikahVenue       : "Vemana Ramachandraiah Function Hall",
   nikahAddress     : "Vemana Ramachandraiah Function Hall, Karatampadu, 524307",
+  lunchVenue       : "Vemana Ramachandraya Kalyana Mandapam",
 
   countdownTarget : "2026-06-07T18:00:00",
   whatsappNumber   : "911234567890",
@@ -152,6 +153,12 @@ a{text-decoration:none}
 .ev-card.haldi{background:linear-gradient(145deg,rgba(232,184,75,.13),rgba(245,217,140,.08));border-color:rgba(232,184,75,.28)}
 .ev-card.haldi::after{background:linear-gradient(90deg,transparent,var(--haldi),transparent)}
 .ev-card.haldi:hover{box-shadow:0 16px 44px rgba(232,184,75,.25)}
+.ev-card.nikah{background:linear-gradient(145deg,rgba(232,184,75,.13),rgba(245,217,140,.08));border-color:rgba(232,184,75,.28)}
+.ev-card.nikah::after{background:linear-gradient(90deg,transparent,var(--haldi),transparent)}
+.ev-card.nikah:hover{box-shadow:0 16px 44px rgba(232,184,75,.25)}
+.ev-card.lunch{background:linear-gradient(145deg,rgba(232,184,75,.13),rgba(245,217,140,.08));border-color:rgba(232,184,75,.28)}
+.ev-card.lunch::after{background:linear-gradient(90deg,transparent,var(--haldi),transparent)}
+.ev-card.lunch:hover{box-shadow:0 16px 44px rgba(232,184,75,.25)}
 .ev-badge{position:absolute;top:13px;right:13px;color:#fff;font-size:.6rem;letter-spacing:2px;text-transform:uppercase;padding:4px 10px;border-radius:var(--r-pill)}
 .ev-badge.gold{background:linear-gradient(135deg,var(--gold),var(--gold-dk))}
 .ev-badge.haldi-b{background:linear-gradient(135deg,var(--haldi),var(--haldi-dk))}
@@ -355,7 +362,7 @@ a{text-decoration:none}
         </div>
       </article>
       <!-- Nikah -->
-      <article class="ev-card">
+      <article class="ev-card nikah">
         <div class="ev-badge gold">Sacred</div>
         <div class="ev-icon nikah-icon">🕌</div>
         <div class="ev-name">Nikah</div>
@@ -367,6 +374,44 @@ a{text-decoration:none}
           <span id="nikah-address"></span>
         </div>
       </article>
+      <!-- Lunch -->
+<article class="ev-card lunch">
+
+  <div class="ev-badge gold">
+    Wedding-feast
+  </div>
+
+  <div class="ev-icon lunch-icon">
+    🍽️
+  </div>
+
+  <div class="ev-name">
+    Lunch
+  </div>
+
+  <div class="ev-arabic">
+    وليمة
+  </div>
+
+  <div class="ev-detail">
+
+    <strong>
+      Immediately After Nikah
+    </strong>
+
+    <span>
+      Lunch Will Be Served
+    </span>
+
+    <br><br>
+
+    <strong id="lunch-venue"></strong>
+
+    <span id="lunch-address"></span>
+
+  </div>
+
+</article>
     </div>
   </section>
 
@@ -504,6 +549,7 @@ function populate(){
   document.getElementById('nikah-date').textContent    = d.nikahDate;
   document.getElementById('nikah-time').textContent    = d.nikahTime;
   document.getElementById('nikah-address').textContent = d.nikahAddress;
+  document.getElementById('lunch-venue').textContent = d.lunchVenue;
   // Scratch
   document.getElementById('maps-btn').href = d.googleMapsLink;
   document.getElementById('rsvp-address').textContent = d.nikahAddress;

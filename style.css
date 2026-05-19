@@ -645,17 +645,21 @@ color:var(--gold);
 
 /* EVENTS */
 
-.event-grid{
+/* EVENTS */
+
+.events-grid{
 
 display:grid;
 
 grid-template-columns:
-repeat(2,1fr);
+repeat(auto-fit,minmax(260px,1fr));
 
 gap:30px;
 }
 
-.event-card{
+.ev-card{
+
+position:relative;
 
 background:
 rgba(255,255,255,.55);
@@ -674,46 +678,126 @@ border:
 text-align:center;
 
 transition:.4s ease;
+
+overflow:hidden;
 }
 
-.event-card:hover{
+.ev-card::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+right:0;
+bottom:0;
+
+height:2px;
+
+opacity:.7;
+}
+
+.ev-card:hover{
 
 transform:translateY(-8px);
 }
 
-.haldi-card{
+/* HALDI */
+.ev-card.haldi{
 
 background:
 linear-gradient(
 145deg,
-rgba(232,184,75,.12),
+rgba(232,184,75,.13),
 rgba(245,217,140,.08)
+);
+
+border-color:
+rgba(232,184,75,.28);
+}
+
+.ev-card.haldi::after{
+
+background:
+linear-gradient(
+90deg,
+transparent,
+var(--haldi),
+transparent
 );
 }
 
-.event-icon{
+.ev-card.haldi:hover{
 
-font-size:3.5rem;
-
-margin-bottom:20px;
+box-shadow:
+0 16px 44px rgba(232,184,75,.25);
 }
 
-.event-card h3{
 
-font-family:'Playfair Display',serif;
+/* NIKAH */
 
-font-size:2rem;
+.ev-card.nikah{
 
-margin-bottom:20px;
+background:
+linear-gradient(
+145deg,
+rgba(232,184,75,.13),
+rgba(245,217,140,.08)
+);
+
+border-color:
+rgba(232,184,75,.28);
 }
 
-.event-card p{
+.ev-card.nikah::after{
 
-line-height:2;
-
-color:var(--text-light);
+background:
+linear-gradient(
+90deg,
+transparent,
+var(--haldi),
+transparent
+);
 }
 
+.ev-card.nikah:hover{
+
+box-shadow:
+0 16px 44px rgba(232,184,75,.25);
+}
+
+
+/* LUNCH */
+
+.ev-card.lunch{
+
+background:
+linear-gradient(
+145deg,
+rgba(232,184,75,.13),
+rgba(245,217,140,.08)
+);
+
+border-color:
+rgba(232,184,75,.28);
+}
+
+.ev-card.lunch::after{
+
+background:
+linear-gradient(
+90deg,
+transparent,
+var(--haldi),
+transparent
+);
+}
+
+.ev-card.lunch:hover{
+
+box-shadow:
+0 16px 44px rgba(232,184,75,.25);
+}
 /* COUNTDOWN */
 
 .timer-grid{
@@ -1031,4 +1115,51 @@ font-size:2rem;
 min-width:100px;
 }
 
+}
+.lunch{
+
+background:
+linear-gradient(
+145deg,
+rgba(232,184,75,.10),
+rgba(245,217,140,.06)
+);
+
+border:
+1px solid rgba(201,168,76,.18);
+
+box-shadow:
+0 18px 50px rgba(201,168,76,.08);
+}
+
+.lunch-icon{
+
+filter:
+drop-shadow(
+0 8px 20px rgba(201,168,76,.22)
+);
+
+font-size:2.5rem;
+}
+
+.sage{
+
+background:
+linear-gradient(
+135deg,
+#7D9B76,
+#5A7A54
+);
+
+color:#fff !important;
+
+border:none;
+}
+.ev-badge{
+
+color:#fff;
+
+font-weight:600;
+
+letter-spacing:2px;
 }
