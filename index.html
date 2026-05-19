@@ -3,48 +3,132 @@
 
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8"/>
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+/>
 
 <title>Nikah Invitation</title>
 
-<!-- GOOGLE FONTS -->
+<!-- FONTS -->
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin/>
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link
+href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Cormorant+Garamond:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap"
+rel="stylesheet"
+/>
 
-<!-- META TAGS -->
+<!-- CSS -->
 
-<meta property="og:title" content="Nikah Invitation">
-
-<meta property="og:description" content="With the blessings of Allah, we invite you to our Nikah Ceremony">
-
-<meta property="og:type" content="website">
-
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css"/>
 
 </head>
 
 <body>
 
-<!-- NAVBAR -->
+<!-- PROGRESS BAR -->
 
-<nav>
+<div id="progress-bar"></div>
 
-<div class="logo">
-NIKAH
+<!-- HERO -->
+
+<section id="hero">
+
+<div class="hero-noise"></div>
+
+<div class="hero-mesh"></div>
+
+<div class="ring ring1"></div>
+<div class="ring ring2"></div>
+<div class="ring ring3"></div>
+
+<canvas id="particles-canvas"></canvas>
+
+<div class="hero-content">
+
+<div class="bismillah">
+﷽
 </div>
 
-<ul>
+<p class="bism-sub">
+In the Name of Allah, the Most Gracious, the Most Merciful
+</p>
 
-<li><a href="#hero">Home</a></li>
+<div class="hero-divider">
+
+<div class="line"></div>
+
+<div class="diamond"></div>
+
+<div class="line"></div>
+
+</div>
+
+<div class="hero-names">
+
+<em>Patan Rahamathullah Khan</em>
+
+<span class="amp">&</span>
+
+<em>Shaik Mazma</em>
+
+</div>
+
+<p class="hero-date">
+Saturday, 7 June 2026
+</p>
+
+<div class="hero-divider bottom-divider">
+
+<div class="line"></div>
+
+<div class="diamond"></div>
+
+<div class="line"></div>
+
+</div>
+
+<button
+class="open-btn"
+onclick="openInvitation()"
+>
+
+✦ &nbsp; Open Invitation &nbsp; ✦
+
+</button>
+
+</div>
+
+</section>
+
+<!-- MAIN INVITATION -->
+
+<div id="invitation">
+
+<!-- NAV -->
+
+<nav id="nav">
+
+<div class="nav-logo">
+R ✦ M
+</div>
+
+<ul class="nav-links">
+
+<li><a href="#welcome">Home</a></li>
 
 <li><a href="#couple">Couple</a></li>
 
 <li><a href="#events">Events</a></li>
+
+<li><a href="#countdown">Countdown</a></li>
 
 <li><a href="#venue">Venue</a></li>
 
@@ -52,76 +136,101 @@ NIKAH
 
 </nav>
 
-<!-- HERO SECTION -->
+<!-- WELCOME -->
 
-<section id="hero">
+<section id="welcome" class="section reveal">
 
-<div class="overlay"></div>
+<div class="welcome-glow"></div>
 
-<div class="lantern lantern1"></div>
-<div class="lantern lantern2"></div>
-<div class="lantern lantern3"></div>
+<div class="section-inner">
 
-<div class="content reveal">
-
-<div id="countdown"></div>
-
-<h1>NIKAH</h1>
-
-<h2>Patan Rahamathullah Khan</h2>
-
-<p class="ampersand">&</p>
-
-<h2>Shaik Mazma</h2>
-
-<div class="date">
-7 June 2026
+<div class="arabic">
+بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
 </div>
 
-<button id="shareBtn">
-Share on WhatsApp
-</button>
+<h1 class="main-title">
+
+<em>Rahamathullah</em>
+
+<span>&</span>
+
+<em>Mazma</em>
+
+</h1>
+
+<p class="welcome-text">
+
+Together with our beloved families,
+
+we joyfully invite you to celebrate
+
+our Nikah Ceremony.
+
+</p>
+
+<div class="quote">
+
+“And among His signs is that He created for you
+
+mates that you may find tranquility in them.”
+
+<br><br>
+
+<span>— Qur'an 30:21 —</span>
+
+</div>
 
 </div>
 
 </section>
 
-<!-- DIVIDER -->
+<!-- COUPLE -->
 
-<div class="divider"></div>
+<section id="couple" class="section reveal">
 
-<!-- COUPLE SECTION -->
+<div class="section-heading">
 
-<section id="couple" class="reveal">
+<span>THE COUPLE</span>
 
-<div class="section-card">
+<h2>Bride & Groom</h2>
 
-<h3>Bride & Groom</h3>
-
-<p>
-With the blessings of Allah,
-together with our families,
-we joyfully invite you
-to celebrate our Nikah Ceremony.
-</p>
+</div>
 
 <div class="couple-grid">
 
-<div class="person">
+<div class="person-card">
 
-<h2>Patan Rahamathullah Khan</h2>
+<div class="person-image">
+🤵
+</div>
 
-<span>Groom</span>
+<h3>
+Patan Rahamathullah Khan
+</h3>
+
+<p class="role">
+The Groom
+</p>
 
 </div>
 
-<div class="person">
-
-<h2>Shaik Mazma</h2>
-
-<span>Bride</span>
-
+<div class="middle-symbol">
+&
 </div>
+
+<div class="person-card">
+
+<div class="person-image">
+👰
+</div>
+
+<h3>
+Shaik Mazma
+</h3>
+
+<p class="role">
+The Bride
+</p>
 
 </div>
 
@@ -129,26 +238,52 @@ to celebrate our Nikah Ceremony.
 
 </section>
 
-<!-- DIVIDER -->
+<!-- EVENTS -->
 
-<div class="divider"></div>
+<section id="events" class="section reveal">
 
-<!-- EVENTS SECTION -->
+<div class="section-heading">
 
-<section id="events" class="reveal">
+<span>WEDDING EVENTS</span>
 
-<div class="section-card">
+<h2>Celebration Timeline</h2>
 
-<h3>Wedding Events</h3>
+</div>
 
 <div class="event-grid">
 
-<div class="event-card">
+<div class="event-card haldi-card">
 
-<h4>Nikah Ceremony</h4>
+<div class="event-icon">
+🌿
+</div>
+
+<h3>
+Haldi
+</h3>
 
 <p>
-Sunday • 7 June 2026
+Friday · 6 June 2026
+</p>
+
+<p>
+4:00 PM onwards
+</p>
+
+</div>
+
+<div class="event-card">
+
+<div class="event-icon">
+🕌
+</div>
+
+<h3>
+Nikah
+</h3>
+
+<p>
+Saturday · 7 June 2026
 </p>
 
 <p>
@@ -157,19 +292,61 @@ Sunday • 7 June 2026
 
 </div>
 
-<div class="event-card">
+</div>
 
-<h4>Reception</h4>
+</section>
 
-<p>
-Sunday • 7 June 2026
-</p>
+<!-- COUNTDOWN -->
 
-<p>
-8:00 PM onwards
-</p>
+<section id="countdown" class="section reveal">
+
+<div class="section-heading">
+
+<span>COUNTDOWN</span>
+
+<h2>Until The Nikah</h2>
 
 </div>
+
+<div class="timer-grid">
+
+<div class="time-card">
+
+<span id="days">
+00
+</span>
+
+<label>Days</label>
+
+</div>
+
+<div class="time-card">
+
+<span id="hours">
+00
+</span>
+
+<label>Hours</label>
+
+</div>
+
+<div class="time-card">
+
+<span id="minutes">
+00
+</span>
+
+<label>Minutes</label>
+
+</div>
+
+<div class="time-card">
+
+<span id="seconds">
+00
+</span>
+
+<label>Seconds</label>
 
 </div>
 
@@ -177,31 +354,48 @@ Sunday • 7 June 2026
 
 </section>
 
-<!-- DIVIDER -->
+<!-- VENUE -->
 
-<div class="divider"></div>
+<section id="venue" class="section reveal">
 
-<!-- VENUE SECTION -->
+<div class="venue-card">
 
-<section id="venue" class="reveal">
+<span class="venue-label">
+VENUE
+</span>
 
-<div class="section-card">
-
-<h3>Venue</h3>
+<h2>
+Vemana Ramachandraya
+Kalyana Mandapam
+</h2>
 
 <p>
-Royal Grand Palace
-<br>
 Bangalore, Karnataka
 </p>
 
+<div class="venue-buttons">
+
 <a
-class="map-btn"
 href="https://maps.google.com"
 target="_blank"
+class="btn gold-btn"
 >
-Open Google Maps
+
+Google Maps
+
 </a>
+
+<a
+href="https://wa.me/"
+target="_blank"
+class="btn sage-btn"
+>
+
+RSVP WhatsApp
+
+</a>
+
+</div>
 
 </div>
 
@@ -209,13 +403,26 @@ Open Google Maps
 
 <!-- FOOTER -->
 
-<footer>
+<footer id="footer">
+
+<div class="footer-arabic">
+بارك الله لكما وبارك عليكما
+</div>
 
 <p>
-“May Allah bless this nikah with love, mercy, Barakah and everlasting happiness upon the couple.”
+May Allah bless your marriage with love,
+barakah and everlasting happiness.
 </p>
 
+<div class="footer-divider"></div>
+
+<div class="footer-monogram">
+R ✦ M
+</div>
+
 </footer>
+
+</div>
 
 <script src="script.js"></script>
 
