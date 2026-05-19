@@ -12,7 +12,7 @@
 const weddingData = {
   groomName        : "Rhamtullah",
   groomFullName    : "Pattan Rhamtullah Khan",
-  groomParents     : "Son of Mr. Abdullah Khan & Mrs. Rabiya",
+  groomParents     : "Son of Mr. Pattan Abdullah Khan & Mrs. Rabiya",
   brideName        : "Mazma",
   brideFullName    : "Shaik Mazma",
   brideParents     : "Daughter of Mr. Shaik Fayaz & Mrs. Farida Begum",
@@ -24,8 +24,8 @@ const weddingData = {
 
   nikahDate        : "Sunday, 07 June 2026",
   nikahTime        : "12:30 PM Onwords",
-  nikahVenue       : "Sree Vemana Ramachandrayya Function Hall",
-  nikahAddress     : "Sree Vemana Ramachandrayya Function Hall, Karatampadu, 524307",
+  nikahVenue       : "Vemana Ramachandraiah Function Hall",
+  nikahAddress     : "Vemana Ramachandraiah Function Hall, Karatampadu, 524307",
 
   countdownTarget : "2026-06-07T18:00:00",
   whatsappNumber   : "911234567890",
@@ -503,11 +503,9 @@ function populate(){
   document.getElementById('haldi-address').textContent = d.haldiAddress;
   document.getElementById('nikah-date').textContent    = d.nikahDate;
   document.getElementById('nikah-time').textContent    = d.nikahTime;
-  document.getElementById('nikah-venue').textContent   = d.nikahVenue;
   document.getElementById('nikah-address').textContent = d.nikahAddress;
   // Scratch
   document.getElementById('maps-btn').href = d.googleMapsLink;
-  document.getElementById('rsvp-venue').textContent   = d.nikahVenue;
   document.getElementById('rsvp-address').textContent = d.nikahAddress;
   // Countdown
   document.getElementById('cd-label').textContent = `Nikah — ${d.nikahDate} · ${d.nikahTime}`;
