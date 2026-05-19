@@ -126,25 +126,32 @@ position:absolute;
 inset:0;
 
 background:
+
 radial-gradient(
 ellipse 70% 50%
-at 20% 20%,
-rgba(232,184,75,.18),
+at 15% 15%,
+rgba(232,184,75,.18) 0%,
 transparent 70%
 ),
 
 radial-gradient(
-ellipse 60% 40%
-at 80% 80%,
-rgba(125,155,118,.12),
+ellipse 55% 45%
+at 85% 85%,
+rgba(125,155,118,.14) 0%,
 transparent 70%
 ),
 
 radial-gradient(
-ellipse 50% 40%
+ellipse 45% 35%
 at 50% 50%,
-rgba(232,213,163,.18),
+rgba(232,213,163,.18) 0%,
 transparent 70%
+),
+
+radial-gradient(
+circle at center,
+rgba(255,255,255,.22),
+transparent 60%
 );
 }
 
@@ -264,34 +271,27 @@ transform:rotate(45deg);
 }
 
 .hero-names{
-
 font-family:'Playfair Display',serif;
-
-font-size:clamp(2rem,6vw,4.5rem);
-
+font-size:clamp(1.8rem,6.5vw,3.2rem);
 font-weight:400;
-
-line-height:1.35;
-
 color:var(--text);
+line-height:1.2;
 }
 
 .hero-names em{
-
 font-style:italic;
+color:var(--gold-dk);
 }
 
-.amp{
-
+.hero-amp{
 display:block;
-
+font-family:'Cormorant Garamond',serif;
+font-style:italic;
 font-size:1.5em;
-
 color:var(--gold);
-
 line-height:1;
+margin:.1em 0;
 }
-
 .hero-date{
 
 margin-top:10px;
@@ -309,9 +309,11 @@ letter-spacing:1px;
 
 .open-btn{
 
-padding:18px 42px;
+display:inline-flex;
+align-items:center;
+gap:10px;
 
-border:none;
+padding:16px 40px;
 
 border-radius:100px;
 
@@ -319,10 +321,10 @@ background:
 linear-gradient(
 135deg,
 var(--gold),
-var(--gold-dark)
+var(--gold-dk)
 );
 
-color:white;
+color:#fff;
 
 font-family:'Cormorant Garamond',serif;
 
@@ -332,12 +334,16 @@ letter-spacing:4px;
 
 text-transform:uppercase;
 
-cursor:pointer;
-
 box-shadow:
-0 10px 30px rgba(154,114,48,.25);
+0 10px 34px rgba(154,114,48,.34);
 
-transition:.35s ease;
+transition:
+transform .35s,
+box-shadow .35s;
+
+animation:
+fadeUp 1.6s .7s var(--ease) both,
+pulse 3s 2.5s ease-in-out infinite;
 }
 
 .open-btn:hover{
@@ -345,7 +351,7 @@ transition:.35s ease;
 transform:translateY(-4px);
 
 box-shadow:
-0 18px 40px rgba(154,114,48,.35);
+0 16px 42px rgba(154,114,48,.45);
 }
 
 /* MAIN */
@@ -432,13 +438,12 @@ color:var(--gold-dark);
 /* SECTIONS */
 
 .section{
-
-padding:
-120px 20px;
-
-max-width:1100px;
-
-margin:auto;
+padding:clamp(3rem,8vw,5.5rem) clamp(1rem,5vw,2rem);
+max-width:840px;
+margin:0 auto;
+opacity:0;
+transform:translateY(34px);
+transition:opacity .85s var(--ease),transform .85s var(--ease);
 }
 
 .section-inner{
@@ -766,7 +771,7 @@ font-size:.7rem;
 color:var(--text-light);
 }
 
-/* VENUE */
+/* VENUE 
 
 .venue-card{
 
@@ -829,7 +834,7 @@ gap:20px;
 
 flex-wrap:wrap;
 }
-
+*/
 /* BUTTONS */
 
 .btn{
@@ -979,6 +984,15 @@ gap:14px;
 flex-wrap:wrap;
 
 justify-content:center;
+}
+
+.hero-content{
+
+width:100%;
+
+max-width:420px;
+
+margin:auto;
 }
 
 .hero-names{
