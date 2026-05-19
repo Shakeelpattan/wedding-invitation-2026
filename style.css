@@ -212,6 +212,7 @@ padding:20px;
 
 .bismillah{
 
+font-weight:700;
 font-family:'Aref Ruqaa',serif;
 
 font-size:clamp(3rem,10vw,6rem);

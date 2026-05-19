@@ -19,14 +19,14 @@ const weddingData = {
 
   haldiDate        : "Saturday, 06 June 2026",
   haldiTime        : "12 PM Onwords",
-  haldiVenue       : "Groom's Family Residence",
+  haldiVenue       : "At Family Residence",
   haldiAddress     : "Oppsite Street to Masjid AL-Firdous, Karatampadu, 524307",
 
   nikahDate        : "Sunday, 07 June 2026",
   nikahTime        : "12:30 PM Onwords",
   nikahVenue       : "Vemana Ramachandraiah Function Hall",
-  nikahAddress     : "Vemana Ramachandraiah Function Hall, Karatampadu, 524307",
-  lunchVenue       : "Vemana Ramachandraya Kalyana Mandapam",
+  nikahAddress     : "VEMANA RAMACHANDRAIAH NAIDU FUNCTION HALL, Karatampadu, 524307",
+  lunchVenue       : "VEMANA RAMACHANDRAIAH NAIDU FUNCTION HALL",
 
   countdownTarget : "2026-06-07T18:00:00",
   whatsappNumber   : "911234567890",
@@ -308,8 +308,9 @@ a{text-decoration:none}
         that you may find tranquillity in them; and He placed between you<br>
         affection and mercy."</em>
         <br><br>
-        <span style="font-size:.8rem;letter-spacing:3px;color:var(--sage)">— Surah Ar-Rum 30:21 —</span>
-      </p>
+<span style="font-size:.8rem;letter-spacing:3px;color:var(--sage);font-weight:700">
+— SURAH AR-RUM 30:21 —
+</span>      </p>
     </div>
   </section>
 
@@ -513,7 +514,7 @@ a{text-decoration:none}
   <!-- FOOTER -->
   <footer id="footer">
     <div class="footer-arabic">بارك الله لكما وبارك عليكما</div>
-    <p class="footer-dua">"May Allah bless you both, and may He bless your union,<br>and bring you together in all goodness."</p>
+    <p class="footer-dua"><strong>"May Allah bless you both, and may He bless your union,<br>and bring you together in all goodness."</strong></p>
     <div class="ornament"><div class="o-line"></div><span class="o-sym">❧</span><div class="o-line"></div></div>
     <div class="footer-mono" id="footer-mono"></div>
     <p class="footer-copy" id="footer-copy"></p>
@@ -535,8 +536,9 @@ function populate(){
   document.getElementById('w-groom').textContent  = d.groomName;
   document.getElementById('w-bride').textContent  = d.brideName;
   document.getElementById('msg-names').textContent = `${d.groomFullName} & ${d.brideFullName}`;
-  document.getElementById('groom-full-name').textContent = d.groomFullName;
-  document.getElementById('bride-full-name').textContent = d.brideFullName;
+  document.getElementById('groom-full-name').textContent = d.groomFullName.toUpperCase();
+
+  document.getElementById('bride-full-name').textContent = d.brideFullName.toUpperCase();
   document.getElementById('groom-parents').innerHTML = `<strong>Son of</strong> ${d.groomParents.replace(/^Son of\s*/i,'')}`;
   document.getElementById('bride-parents').innerHTML = `<strong>Daughter of</strong> ${d.brideParents.replace(/^Daughter of\s*/i,'')}`;
   if(d.groomImage) document.getElementById('groom-img-wrap').innerHTML=`<img src="${d.groomImage}" alt="${d.groomFullName}"/>`;
@@ -558,7 +560,7 @@ function populate(){
   
   // Footer
   document.getElementById('footer-mono').textContent = `${d.groomName[0]} ✦ ${d.brideName[0]}`;
-  document.getElementById('footer-copy').textContent = `${d.nikahDate} · ${d.nikahVenue}`;
+  document.getElementById('footer-copy').innerHTML = `<strong>${d.nikahDate} · ${d.nikahVenue}</strong>`;
   // Music
   if(!d.backgroundMusic) document.getElementById('music-btn').style.display='none';
   else document.getElementById('bg-music').src = d.backgroundMusic;
